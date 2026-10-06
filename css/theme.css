@@ -12,14 +12,18 @@
    La version de reference garde le theme par defaut. Exemple de theme
    "vert foret" ci-dessous, a decommenter pour tester.
    ========================================================================== */
+@font-face {
+  font-family: "Source";
+  src:
+    local("Source"),
+    url("../fonts/Source_Sans_3/") format("ttf");
+}
 
-/*
 :root {
   --color-primary: #166534;
   --color-primary-hover: #14532d;
   --color-primary-soft: #f0fdf4;
   --color-focus: #15803d;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Source", "Inter", system-ui, sans-serif;
   --radius: 4px;
 }
-*/
