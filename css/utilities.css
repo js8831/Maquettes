@@ -1,0 +1,16 @@
+/* ==========================================================================
+   utilities.css - Classes a usage unique, chargees en dernier
+   ========================================================================== */
+
+/* Masque visuellement un element, mais le garde lisible par les lecteurs d'ecran. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

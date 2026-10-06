@@ -1,0 +1,10 @@
+/* ==========================================================================
+   layout.css - Grandes zones de la page (a completer le jour 2)
+
+   A faire :
+   - .app : coquille applicative en CSS Grid (header, sidebar, main)
+   - .auth : mise en page des pages de connexion / inscription
+   - .page-header : titre de page + actions
+   - .grid-auto : grille de cartes responsive sans media query
+   Rappel : mobile-first, breakpoints 40em et 64em.
+   ========================================================================== */

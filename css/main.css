@@ -1,0 +1,12 @@
+/* ==========================================================================
+   main.css - Point d'entree unique, a lier dans chaque page HTML.
+   L'ordre des imports compte : du plus general au plus specifique.
+   Un fichier charge plus tard l'emporte a specificite egale.
+   ========================================================================== */
+@import url("reset.css");
+@import url("tokens.css");
+@import url("theme.css");
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");
+@import url("utilities.css");

@@ -1,0 +1,17 @@
+/* ==========================================================================
+   components.css - Composants reutilisables, nommes en BEM
+     .bloc  /  .bloc__element  /  .bloc--modificateur
+
+   Jour 1 : .btn, .badge, .card, .alert
+   Jour 2 : .topbar, .sidebar, .nav, .stat, .avatar, .skip-link
+   Jour 3 : .field, .input, .select, .textarea, .fieldset, .choice,
+            .table, .filters, .pagination, .timeline, .dialog
+   ========================================================================== */
+
+/* 1. Boutons */
+
+/* 2. Badges de statut */
+
+/* 3. Cartes */
+
+/* 4. Alertes */
