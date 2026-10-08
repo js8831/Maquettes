@@ -14,7 +14,10 @@
   margin-inline: auto;
 }
 
-/* css/layout.css */
+/* --------------------------------------------------------------------------
+   Pages d'authentification (connexion, inscription)
+   -------------------------------------------------------------------------- */
+
 .auth {
   display: grid;
   /*  La hauteur de l'ecran d'affichage (ecran visible du navigateur) prend 100% */
@@ -56,9 +59,34 @@
   }
 }
 
+/* phrase d'accroche ou sous-titre */
 .auth__tagline {
   font-size: var(--text-2xl);
   font-weight: var(--weight-semibold);
   /* Interligne */
   line-height: var(--leading-tight);
+}
+
+/* --------------------------------------------------------------------------
+   En-tete de page : titre a gauche, actions a droite (passent dessous sur mobile)
+   -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+   Grilles reutilisables
+   -------------------------------------------------------------------------- */
+
+/* Autant de colonnes que possible, chacune d'au moins 13rem. Aucune media query. */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: var(--space-4);
+}
+
+/* Empile des blocs avec un espacement regulier sauf sur le premier enfant. */
+.stack > * + * {
+  margin-top: var(--space-5);
+}
+
+.stack-sm > * + * {
+  margin-top: var(--space-3);
 }

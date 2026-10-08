@@ -44,16 +44,13 @@
         /* la boite fais min 10 rem et s'il y a de plus d'espace elle prend 1fr */
         grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
         gap: var(--space-3);
-        /* display:flex;
-        justify-content: start;
-        flex-wrap: wrap;
-        width: 100%; */
       }
 
       .swatch {
         border: 1px solid var(--color-border);
         border-radius: var(--radius);
-        /* flex: 1; */
+        /* cache ce qui dépasse de l'element parent */
+        overflow: hidden;
         min-width: 180px;
       }
       .swatch__color {
@@ -63,6 +60,24 @@
       .swatch__name {
         padding: var(--space-2);
       }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-3);
+      }
+
+      .space-demo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-3);
+        font-family: var(--font-mono);
+        font-size: var(--text-sm);
+      }
+      .space-demo span:first-child {
+        background: var(--color-primary);
+        height: 1rem;
+      }
     </style>
   </head>
   <body>
@@ -70,8 +85,8 @@
       <h1>Design system TechCorp RH</h1>
 
       <!-- ===================== Couleurs ===================== -->
-      <section aria-labelledby="">
-        <h2>Couleurs sémantique</h2>
+      <section aria-labelledby="sg-couleurs">
+        <h2 id="sg-couleurs">Couleurs sémantique</h2>
         <div class="swatches">
           <div class="swatch">
             <div
@@ -140,8 +155,8 @@
       </section>
 
       <!-- ===================== Typographie ===================== -->
-      <section aria-labelledby="">
-        <h2>Typographie</h2>
+      <section aria-labelledby="sg-typo">
+        <h2 id="sg-typo">Typographie</h2>
         <div>
           <p style="font-size: var(--text-3xl)" class="font-semibold">
             --text-3xl : Titre de page desktop
@@ -164,33 +179,227 @@
           </p>
         </div>
       </section>
-      <div></div>
 
       <!-- ===================== Espacements ===================== -->
-      <section aria-labelledby="">
-        <h2>Espacements</h2>
+      <section aria-labelledby="sg-espaces">
+        <h2 id="sg-espaces">Espacements</h2>
+        <div class="stack-sm">
+          <div class="space-demo">
+            <span style="width: var(--space-1)"></span>--space-1 : 4px
+          </div>
+          <div class="space-demo">
+            <span style="width: var(--space-2)"></span>--space-2 : 8px
+          </div>
+          <div class="space-demo">
+            <span style="width: var(--space-3)"></span>--space-3 : 12px
+          </div>
+          <div class="space-demo">
+            <span style="width: var(--space-4)"></span>--space-4 : 16px
+          </div>
+          <div class="space-demo">
+            <span style="width: var(--space-5)"></span>--space-5 : 24px
+          </div>
+          <div class="space-demo">
+            <span style="width: var(--space-6)"></span>--space-6 : 32px
+          </div>
+          <div class="space-demo">
+            <span style="width: var(--space-7)"></span>--space-7 : 48px
+          </div>
+          <div class="space-demo">
+            <span style="width: var(--space-8)"></span>--space-8 : 64px
+          </div>
+        </div>
       </section>
 
       <!-- ===================== Boutons ===================== -->
-      <section aria-labelledby="">
-        <h2>Boutons</h2>
+      <section aria-labelledby="sg-boutons">
+        <h2 id="sg-boutons">Boutons</h2>
+        <div class="row">
+          <button class="btn btn--primary" type="button">Primaire</button>
+          <button class="btn btn--secondary" type="button">Secondaire</button>
+          <button class="btn btn--danger" type="button">Danger</button>
+          <button class="btn btn--ghost" type="button">Discret</button>
+          <button class="btn btn--primary" type="button" disabled>
+            Désactivé
+          </button>
+          <button class="btn btn--primary btn--sm" type="button">Petit</button>
+          <p class="mt-4 text-sm text-muted">
+            Règle : un seul bouton primaire par zone. Un lien qui change de page
+            reste un <code>&lt;a&gt;</code>, même s'il a l'apparence d'un
+            bouton.
+          </p>
+        </div>
       </section>
 
       <!-- ===================== Badges ===================== -->
-      <section aria-labelledby="">
-        <h2>Badges</h2>
+      <section aria-labelledby="sg-badges">
+        <h2 id="sg-badges">Badges</h2>
+        <div class="row">
+          <span class="badge badge--pending">En attente manager</span>
+          <span class="badge badge--in-progress">En attente RH</span>
+          <span class="badge badge--approved">Validée</span>
+          <span class="badge badge--rejected">Refusée</span>
+          <span class="badge badge--refunded">Remboursée</span>
+          <span class="badge">Brouillon</span>
+        </div>
       </section>
       <!-- ===================== Alertes ===================== -->
 
-      <section aria-labelledby="">
-        <h2>Alertes</h2>
+      <section aria-labelledby="sg-alertes">
+        <h2 id="sg-alertes">Alertes <code>.alert</code></h2>
+        <div class="stack-sm">
+          <div class="alert alert--info">
+            <p>
+              <span class="alert__title">Information.</span> Votre demande sera
+              traitée sous 48 heures.
+            </p>
+          </div>
+          <div class="alert alert--success">
+            <p>
+              <span class="alert__title">Succès.</span> La demande a bien été
+              envoyée.
+            </p>
+          </div>
+          <div class="alert alert--warning">
+            <p>
+              <span class="alert__title">Attention.</span> 3 personnes de
+              l'équipe sont absentes sur cette période.
+            </p>
+          </div>
+          <div class="alert alert--error">
+            <p>
+              <span class="alert__title">Erreur.</span> Le justificatif dépasse
+              la taille maximale de 5 Mo.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- ===================== Cartes et indicateurs ===================== -->
-      <section aria-labelledby="">
-        <h2>Cartes et indicateur chiffré</h2>
+      <section aria-labelledby="sg-cartes">
+        <h2 id="sg-cartes">
+          Cartes <code>.card</code> et indicateurs <code>.stat</code>
+        </h2>
+        <div class="grid-auto">
+          <div class="card stat">
+            <span class="stat__label">Congés payés restants</span>
+            <span class="stat__value"
+              >14 <span class="stat__unit">jours</span></span
+            >
+            <span class="stat__hint">Sur 25 jours acquis</span>
+          </div>
+          <div class="card">
+            <div class="card__header">
+              <h3 class="card__title">Titre de carte</h3>
+              <span class="badge badge--approved">Validée</span>
+            </div>
+            <p>Contenu de la carte.</p>
+            <p class="card__footer text-sm text-muted">Pied de carte</p>
+          </div>
+        </div>
       </section>
-      <a href="#">lien</a>
+      <!-- ===================== Formulaires ===================== -->
+
+      <section aria-labelledby="sg-forms">
+        <h2 id="sg-forms">Champs de formulaire <code>.field</code></h2>
+        <div class="form__row">
+          <div class="field">
+            <label class="field__label" for="sg-1">Champ normal</label>
+            <input
+              class="input"
+              id="sg-1"
+              type="text"
+              aria-describedby="sg-1-aide"
+            />
+            <p class="field__hint" id="sg-1-aide">
+              Texte d'aide associé par aria-describedby.
+            </p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-2">Champ en erreur</label>
+            <!-- aria-invalid : att. d'access. pour indiquer que le champs qui a le focus contient une erreur  -->
+            <input
+              class="input"
+              id="sg-2"
+              type="text"
+              value="valeur"
+              aria-invalid="true"
+              aria-describedby="sg-2-err"
+            />
+            <p class="field__error" id="sg-2-err">
+              Message d'erreur explicite.
+            </p>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-3">Liste déroulante</label>
+            <select class="select" id="sg-3">
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field__label" for="sg-4">Champ désactivé</label>
+            <input
+              class="input"
+              id="sg-4"
+              type="text"
+              value="Non modifiable"
+              disabled
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Tableau ===================== -->
+      <section aria-labelledby="sg-table">
+        <!-- Liaison de la section avec le titre grâce à la meme valeur entre l'id est l'attribut d'accessibilité aria.. -->
+        <h2 id="sg-table">Tableau <code>.table</code></h2>
+        <!-- region : attribut d'accessibilité. Il indique que cette zone est une "région" importante de la page -->
+        <!-- tabindex : att. d'access. qui permet à un élément qui n'est normalement pas cliquable ou sélectionnable (comme une <div>)
+          de recevoir le focus lorsque l'utilisateur navigue avec la touche Tab de son clavier-->
+        <div
+          class="table-wrapper"
+          role="region"
+          aria-labelledby="sg-table-cap"
+          tabindex="0"
+        >
+          <table class="table">
+            <!-- Titre du tab et doit etre placé apres -->
+            <caption id="sg-table-cap">
+              Exemple de tableau accessible
+            </caption>
+            <!-- Table Head : regroupe les titre des colonnes -->
+            <thead>
+              <!-- Table Row (ligne de tableau) -->
+              <tr>
+                <!-- Table Header (cellule qui sert de titre pour col ou ligne !), scope : att. d'access. = en-tête d'une colonne -->
+                <th scope="col">Collaborateur</th>
+                <th scope="col">Type</th>
+                <th scope="col" class="table__num">Jours</th>
+                <th scope="col">Statut</th>
+              </tr>
+            </thead>
+            <!-- Corps du tableau -->
+            <tbody>
+              <tr>
+                <th scope="row">Claire Martin</th>
+                <!-- Table Data : contient de la donnée -->
+                <td>Congés payés</td>
+                <td class="table__num">5</td>
+                <td>
+                  <span class="badge badge--pending">En attente manager</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Thomas Roux</th>
+                <td>RTT</td>
+                <td class="table__num">1</td>
+                <td><span class="badge badge--approved">Validée</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </main>
   </body>
 </html>
