@@ -10,21 +10,27 @@
    ========================================================================== */
 .container {
   max-width: var(--content-max);
+  /* marge de gch et dt (inline */
   margin-inline: auto;
 }
 
 /* css/layout.css */
 .auth {
   display: grid;
+  /*  La hauteur de l'ecran d'affichage (ecran visible du navigateur) prend 100% */
   min-height: 100vh;
 }
 
 .auth__aside {
+  /* N'affiche pas la partie de gch pour toutes les tailles
+  Mais comme on est en mobile first la regle plus bas vient surcharger pour 
+  les grand ecrans !*/
   display: none;
 }
 
 .auth__main {
   display: grid;
+  /*  mix de align-items (flex et grid) et de justify-items (grid) */
   place-items: center;
   padding: var(--space-6) var(--space-4);
 }
@@ -40,6 +46,7 @@
   }
 
   .auth__aside {
+    /* On passe en flex des 64*16px et annule le display none*/
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,4 +54,11 @@
     color: var(--color-on-primary);
     background-color: var(--color-primary);
   }
+}
+
+.auth__tagline {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  /* Interligne */
+  line-height: var(--leading-tight);
 }

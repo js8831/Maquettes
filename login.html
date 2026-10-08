@@ -30,49 +30,75 @@
   <body>
     <div class="auth">
       <div class="auth__aside">
-        <p>
+        <p class="brand">
           <img
             class="brand__logo"
             src="assets/logo.svg"
-            alt=""
+            alt="logo"
             width="32"
             height="32"
           />
+          TechCorp RH
         </p>
         <div>
-          <p>
+          <p class="auth__tagline">
             Vos congés, votre matériel et vos notes de frais, au même endroit.
           </p>
-          <p>La plateforme RH interne de TechCorp.</p>
+          <p class="mt-4">La plateforme RH interne de TechCorp.</p>
         </div>
+        <p class="text-sm">TechCorp 2026</p>
       </div>
 
-      <main>
-        <h1>Connexion</h1>
-        <p>Utilisez votre adresse e-mail professionnelle.</p>
-        <form action="dashboard-employe.html" method="post">
-          <label class="field__label" for="email">Adresse e-mail</label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            title="Ecrivez votre email"
-          />
-          <label class="field__label" for="password">Mot de passe</label>
-          <input
-            id="password"
-            type="password"
-            name="password"
-            title="Entrez votre password"
-          />
-        </form>
+      <main class="auth__main">
+        <div class="auth__panel">
+          <h1>Connexion</h1>
+          <p class="mt-2 text-muted">
+            Utilisez votre adresse e-mail professionnelle.
+          </p>
+          <form class="form mt-5" action="dashboard-employe.html" method="post">
+            <div class="field">
+              <label class="field__label" for="email">Adresse e-mail</label>
+              <!-- autocomplete : le gestionnaire de mots de passe remplit le bon champ. -->
 
-        <p><a href="inscription.html">Inscription</a></p>
-        <footer>
-          <a href="#">Mentions légales</a> -
-          <a href="#">Politique de confidentialité</a> -
-          <a href="#">Accessibilité : partiellement conforme</a>
-        </footer>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                autocomplete="username"
+                required
+                title="Ecrivez votre email"
+              />
+            </div>
+            <div class="field">
+              <label class="field__label" for="password">Mot de passe</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                autocomplete="current-password"
+                required
+                title="Entrez votre password"
+              />
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" name="remember" />
+              <span>Rester connecté sur cet appareil</span>
+            </label>
+            <button class="btn btn--primary btn--block" type="submit">
+              Se connecter
+            </button>
+          </form>
+
+          <p class="mt-5 text-sm">
+            Pas encore de compte ?
+            <a href="inscription.html">Créer un compte</a>
+          </p>
+          <footer class="mt-5 text-sm text-muted">
+            <a href="#">Mentions légales</a> -
+            <a href="#">Politique de confidentialité</a> -
+            <a href="#">Accessibilité : partiellement conforme</a>
+          </footer>
+        </div>
       </main>
     </div>
   </body>

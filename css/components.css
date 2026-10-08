@@ -182,3 +182,46 @@
 .alert__title {
   font-weight: var(--weight-semibold);
 }
+
+/* formulaires */
+
+.form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+.field__label {
+  font-weight: var(--weight-semibold);
+}
+
+.input {
+  width: 100%;
+  min-height: 2.75rem;
+  border: 1px solid var(--color-border-input);
+  border-radius: var(--radius);
+  background-color: var(--color-surface);
+}
+
+.checkbox {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/* En-tête */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+}
+
+.brand__logo {
+  border-radius: var(--radius);
+  box-shadow: 0 0 0 2px currentColor;
+}

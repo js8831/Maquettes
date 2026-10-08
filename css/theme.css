@@ -21,10 +21,10 @@
 } */
 
 :root {
-  --color-primary: #3f0069;
-  --color-primary-hover: #14532d;
-  --color-primary-soft: #f0fdf4;
-  --color-focus: #15803d;
+  --color-primary: #22587c;
+  --color-primary-hover: #123044;
+  --color-primary-soft: #529cce;
+  --color-focus: #173d57;
   --font-sans: "Source", "Inter", system-ui, sans-serif;
   --radius: 4px;
 }
