@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Nom de la page - TechCorp RH</title>
+    <meta
+      name="description"
+      content="Une phrase qui resume le contenu de la page."
+    />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="auth">
+      <div class="auth__aside">
+        <p>
+          <img
+            class="brand__logo"
+            src="assets/logo.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
+        </p>
+        <div>
+          <p>
+            Vos congés, votre matériel et vos notes de frais, au même endroit.
+          </p>
+          <p>La plateforme RH interne de TechCorp.</p>
+        </div>
+      </div>
+
+      <main>
+        <h1>Connexion</h1>
+        <p>Utilisez votre adresse e-mail professionnelle.</p>
+        <form action="dashboard-employe.html" method="post">
+          <label class="field__label" for="email">Adresse e-mail</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            title="Ecrivez votre email"
+          />
+          <label class="field__label" for="password">Mot de passe</label>
+          <input
+            id="password"
+            type="password"
+            name="password"
+            title="Entrez votre password"
+          />
+        </form>
+
+        <p><a href="inscription.html">Inscription</a></p>
+        <footer>
+          <a href="#">Mentions légales</a> -
+          <a href="#">Politique de confidentialité</a> -
+          <a href="#">Accessibilité : partiellement conforme</a>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

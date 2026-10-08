@@ -1,0 +1,196 @@
+<!doctype html>
+<!-- lang : langue de la page, utilisee par les lecteurs d'ecran et les moteurs de recherche. -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Sans cette balise, le mobile affiche la page en version desktop dezoomee. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Titre unique par page : "Nom de la page - Nom du site". C'est ce qui
+       s'affiche dans l'onglet, l'historique et les resultats de recherche. -->
+    <title>Guide de style</title>
+    <meta name="description" content="TechCorp RH design system." />
+
+    <!-- Application interne : pas d'indexation par les moteurs de recherche. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+    <style>
+      .styleguide {
+        padding: var(--space-6) var(--space-4);
+      }
+
+      .styleguide section {
+        margin-top: var(--space-7);
+      }
+
+      .styleguide h2 {
+        margin-bottom: var(--space-4);
+        padding-bottom: var(--space-2);
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .swatches {
+        display: grid;
+        /* auto-fill : Le navigateur remplit automatiquement la ligne avec autant de boîtes que possible selon la place disponible*/
+        /* la boite fais min 10 rem et s'il y a de plus d'espace elle prend 1fr */
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+        gap: var(--space-3);
+        /* display:flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        width: 100%; */
+      }
+
+      .swatch {
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius);
+        /* flex: 1; */
+        min-width: 180px;
+      }
+      .swatch__color {
+        height: 4rem;
+      }
+
+      .swatch__name {
+        padding: var(--space-2);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="styleguide container">
+      <h1>Design system TechCorp RH</h1>
+
+      <!-- ===================== Couleurs ===================== -->
+      <section aria-labelledby="">
+        <h2>Couleurs sémantique</h2>
+        <div class="swatches">
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-primary)"
+            ></div>
+            <p class="swatch__name">--color-primary</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-primary-soft)"
+            ></div>
+            <p class="swatch__name">--color-primary-soft</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-text)"
+            ></div>
+            <p class="swatch__name">--color-text</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-text-muted)"
+            ></div>
+            <p class="swatch__name">--color-text-muted</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-text-bg)"
+            ></div>
+            <p class="swatch__name">--color-bg</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-border-input)"
+            ></div>
+            <p class="swatch__name">--color-border-input</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-success)"
+            ></div>
+            <p class="swatch__name">--color-success</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-warning)"
+            ></div>
+            <p class="swatch__name">--color-warning</p>
+          </div>
+          <div class="swatch">
+            <div
+              class="swatch__color"
+              style="background: var(--color-danger)"
+            ></div>
+            <p class="swatch__name">--color-danger</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== Typographie ===================== -->
+      <section aria-labelledby="">
+        <h2>Typographie</h2>
+        <div>
+          <p style="font-size: var(--text-3xl)" class="font-semibold">
+            --text-3xl : Titre de page desktop
+          </p>
+          <p style="font-size: var(--text-2xl)" class="font-semibold">
+            --text-2xl : Titre de page mobile
+          </p>
+          <p style="font-size: var(--text-xl)" class="font-semibold">
+            --text-xl : Titre de section
+          </p>
+          <p style="font-size: var(--text-lg)" class="font-semibold">
+            --text-lg : Titre de carte
+          </p>
+          <p>--text-base : Texte courant, 16px, interligne 1.5.</p>
+          <p class="text-sm text-muted">
+            --text-sm : Aide, métadonnées, contenu de tableau.
+          </p>
+          <p style="font-size: var(--text-xs)">
+            --text-xs : Badges, en-têtes de tableau.
+          </p>
+        </div>
+      </section>
+      <div></div>
+
+      <!-- ===================== Espacements ===================== -->
+      <section aria-labelledby="">
+        <h2>Espacements</h2>
+      </section>
+
+      <!-- ===================== Boutons ===================== -->
+      <section aria-labelledby="">
+        <h2>Boutons</h2>
+      </section>
+
+      <!-- ===================== Badges ===================== -->
+      <section aria-labelledby="">
+        <h2>Badges</h2>
+      </section>
+      <!-- ===================== Alertes ===================== -->
+
+      <section aria-labelledby="">
+        <h2>Alertes</h2>
+      </section>
+
+      <!-- ===================== Cartes et indicateurs ===================== -->
+      <section aria-labelledby="">
+        <h2>Cartes et indicateur chiffré</h2>
+      </section>
+      <a href="#">lien</a>
+    </main>
+  </body>
+</html>
