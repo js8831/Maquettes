@@ -1,11 +1,6 @@
 /* ==========================================================================
    components.css - Composants reutilisables, nommes en BEM
      .bloc  /  .bloc__element  /  .bloc--modificateur
-
-   Jour 1 : .btn, .badge, .card, .alert
-   Jour 2 : .topbar, .sidebar, .nav, .stat, .avatar, .skip-link
-   Jour 3 : .field, .input, .select, .textarea, .fieldset, .choice,
-            .table, .filters, .pagination, .timeline, .dialog
    ========================================================================== */
 
 /* ==========================================================================
@@ -129,6 +124,20 @@
   background-color: var(--color-neutral-soft);
 }
 
+/* Compteur rond pour les notifications non lues */
+.count {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding-inline: var(--space-1);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--color-on-primary);
+  background-color: var(--color-danger);
+}
+
 /* ==========================================================================
    3. Carte
    ========================================================================== */
@@ -235,28 +244,98 @@
 /* ==========================================================================
    6. En-tete applicatif (topbar)
    ========================================================================== */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--header-height);
+  padding-inline: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.topbar__menu {
+  background: none;
+  border: none;
+  padding: var(--space-2);
+}
+
+.topbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
 
 .brand {
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-text);
   font-size: var(--text-lg);
   font-weight: var(--weight-bold);
 }
 
+/* Hérite de la couleur blanc de son parent auth__side
+Il surchargera brand dans login mais pas brand dans dashboard car classe non utilisé sur le logo */
+.brand--inverse {
+  color: inherit;
+}
+
 .brand__logo {
+  width: 2rem;
+  height: 2rem;
   border-radius: var(--radius);
-  box-shadow: 0 0 0 2px currentColor;
+  box-shadow: 0 0 0 2px white;
+}
+
+/* relative : point de repère */
+.icon-link {
+  display: inline-grid;
+  position: relative;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius);
+  color: var(--color-text-muted);
+}
+
+/* absolute : se positionne par rapport au parent relative (point de repère) */
+.icon-link .count {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
 }
 
 /* ==========================================================================
    7. Avatar et utilisateur connecte
    ========================================================================== */
 
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+}
+
 /* ==========================================================================
    8. Barre laterale et navigation principale
    ========================================================================== */
 
+/* flex-shrink : gère le retrécissement d'un élément flexible
+dans son conteneur, s'il n y a plus de place = 0 > ne rétrécit pas */
+.nav__icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
 /* ==========================================================================
    9. Formulaires
    ========================================================================== */

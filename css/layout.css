@@ -8,9 +8,16 @@
    - .grid-auto : grille de cartes responsive sans media query
    Rappel : mobile-first, breakpoints 40em et 64em.
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Coquille applicative (app shell)
+   Mobile  : en-tete + contenu, la navigation est un panneau qui s'ouvre.
+   Desktop : en-tete sur toute la largeur, barre laterale fixe a gauche.
+   -------------------------------------------------------------------------- */
+
 .container {
   max-width: var(--content-max);
-  /* marge de gch et dt (inline */
+  /* marge de gch et dt (inline) */
   margin-inline: auto;
 }
 
