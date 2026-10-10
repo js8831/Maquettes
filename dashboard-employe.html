@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableau de bord - TechCorp RH</title>
+    <meta
+      name="description"
+      content="Affichage de vos congés, votre matériel et de vos notes de frais. "
+    />
+    <!-- Application interne : on demande aux moteurs de recherche de ne pas indexer. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <!----------------------------------- HEADER ----------------------------------->
+      <header class="topbar">
+        <!----------------------------------- HEADER - BUTTON ----------------------------------->
+        <button class="topbar__menu">
+          <svg
+            class="nav__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+
+        <!----------------------------------- HEADER - LOGO ----------------------------------->
+        <a href="dashboard-employe.html" class="brand">
+          <img
+            class="brand__logo"
+            src="assets/logo.svg"
+            alt="Logo de TechCorp RH"
+          />
+          TechCorp RH
+        </a>
+
+        <!----------------------------------- HEADER - ACTION ----------------------------------->
+
+        <div class="topbar__actions">
+          <a class="icon-link" href="#">
+            <svg
+              class="nav__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M6 16v-5a6 6 0 1 1 12 0v5l2 2H4z" />
+              <path d="M10 21a2 2 0 0 0 4 0" />
+            </svg>
+            <span class="count" aria-hidden="true">3</span>
+          </a>
+          <span class="avatar">CM</span>
+          <a class="icon-link" href="#"
+            ><svg
+              class="nav__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h10"></path>
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <!----------------------------------- NAVBAR ----------------------------------->
+      <nav>
+        <h2>MON ESPACE</h2>
+        <ul>
+          <li>
+            <a href=""
+              ><svg
+                class="nav__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z" />
+              </svg>
+              Tableau de bord</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><svg
+                class="nav__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <path d="M3 10h18M8 3v4M16 3v4" />
+              </svg>
+              Mes congés</a
+            >
+          </li>
+          <li>
+            <a href="">
+              <svg
+                class="nav__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M6 3h12v18l-3-2-3 2-3-2-3 2z" />
+                <path d="M9 8h6M9 12h6" />
+              </svg>
+              Notes de frais</a
+            >
+          </li>
+          <li>
+            <a href="">
+              <svg
+                class="nav__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="4" y="5" width="16" height="11" rx="1" />
+                <path d="M2 19h20" />
+              </svg>
+              Matériel</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><svg
+                class="nav__icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <circle cx="12" cy="8" r="4" />
+                <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+              </svg>
+              Mon profil</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!----------------------------------- MAIN ----------------------------------->
+      <main></main>
+    </div>
+  </body>
+</html>
