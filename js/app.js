@@ -4,11 +4,17 @@
    ========================================================================== */
 
 // Ouverture / fermeture de la navigation sur mobile.
+
+// Ciblage des balises dans le dom et stockage dans des constantes
+// Objet JavaScript qui représente un élément dans la structure de la page (ici le type est HTMLButtonElement)
+// Ces objets en JS possedent la methode setAttribute qui permet de modifier les attributs
 const app = document.querySelector(".app");
 const navToggle = document.querySelector("[data-nav-toggle]");
 
 function setNavOpen(isOpen) {
+  // fct qui change la valeur d'aria pour le lecteur
   navToggle.setAttribute("aria-expanded", String(isOpen));
+  // on ajoute la classe si isOpen vaut true sinon on la retire
   app.classList.toggle("app--nav-open", isOpen);
 }
 
